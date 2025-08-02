@@ -6,7 +6,6 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
-# 1. Load the dataset
 housing = pd.read_csv("housing.csv")
 
 # 2. Create a stratified test set
@@ -54,4 +53,5 @@ full_pipeline = ColumnTransformer([
 
 # 6. Transform the data
 housing_prepared = full_pipeline.fit_transform(housing)
+
 print(housing_prepared.shape)
